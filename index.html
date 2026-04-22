@@ -1,13 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Don't forget to connect the CSS file -->
-  <title>Library</title>
-</head>
-<body>
-  <h1>Library</h1>
-  <!-- Don't forget to connect the JavaScript file -->
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Don't forget to connect the CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Library</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1 id="header-title">Library</h1>
+    </header>
+
+    <section id="book-filters">
+      <fieldset>
+        <legend>Filter on genre</legend>
+        <button data-filter="all">All</button>
+        <button data-filter="fiction">Fiction</button>
+        <button data-filter="science fiction">Science Fiction</button>
+        <button data-filter="fantasy">Fantasy</button>
+      </fieldset>
+      <fieldset>
+        <legend>Sorting options</legend>
+        <button data-sort="datenewest">Date (Newest)</button>
+        <button data-sort="dateoldest">Date (Oldest)</button>
+        <button data-sort="ratinghigh">Rating (High)</button>
+        <button data-sort="ratinglow">Rating (Low)</button>
+      </fieldset>
+    </section>
+
+    <!-- main - grid container -->
+    <main id="book-container" class="book-grid">
+      <!-- 
+      <div class="book-card">
+        <img class="book-cover" src="" alt="" />
+        <div class="book-info">
+          <h2 class="book-title"></h2>
+          <p class="book-author"></p>
+          <p class="book-year"></p>
+          <p class="book-genre"></p>
+          <p class="book-rating"></p>
+          <p class="book-description"></p>
+        </div>
+      </div>
+      -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

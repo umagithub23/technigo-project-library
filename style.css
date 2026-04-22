@@ -1,3 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background: blue;
+  background: #f4f7f5;
+  color: #2e2e2e;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+#book-filters {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+#book-filters fieldset {
+  border: 0px solid #a8b8a5;
+  background: #f4f7f5;
+  padding: 16px 20px;
+  border-radius: 8px;
+  min-width: 220px;
+  flex: 1;
+}
+
+#book-filters legend {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3a6b57;
+  padding: 0 6px;
+}
+
+#book-filters button {
+  padding: 8px 16px;
+  border: 1px solid #a8b8a5;
+  background: #e9f0eb;
+  color: #2e2e2e;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.25s ease;
+}
+
+#book-filters button:hover {
+  background: #b7e7cc;
+  border-color: #8faf9a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile first */
+.book-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch;
+}
+
+@media (max-width: 600px) {
+  #book-filters {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #book-filters fieldset {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+  .book-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .book-card {
+    grid-column: span 1;
+  }
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.book-cover {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Flex boxes inside the grid items - Flex child */
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background: #e9f0eb;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.book-info h2 {
+  color: #3a6b57;
+  font-size: 1.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.book-info p {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.3;
+  margin: 2px 0;
+  font-style: italic;
+}
+
+.book-title {
+  padding-bottom: 2px;
 }

@@ -279,3 +279,10 @@ sortButtons.forEach((btn) => {
     renderBooks(sortedBooks);
   });
 });
+
+document.getElementById('random-btn').addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * books.length);
+  const randomBook = books[randomIndex];
+
+  renderBooks([randomBook]);
+});

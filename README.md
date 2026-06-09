@@ -1,10 +1,22 @@
 # Library
 
-Replace this readme with your own information about the project. You can include things like:
-
 - Brief description of the assignment
-- How you approached the task, what tools and techniques you used, and how you planned it
-- If you had more time, what would be next?
+
+A simple digital library built with HTML, CSS, and JavaScript. It displays a collection of books from an array and allows the user to filter, sort, and view a random book.
+
+- Approach
+  - Started by structuring the HTML and connecting CSS + JS.
+  - Used an array of book objects and rendered them dynamically with DOM manipulation.
+  - Added event listeners for filtering (by genre), sorting (year, rating, title), and selecting a random book
+  - Used array methods like .filter(), .sort(), and .map() to keep the logic clean.
+  - Styled the layout with a responsive grid and a minimal Scandinavian‑inspired design.
+
+- Next Steps (If More Time)
+  - Add a search bar for keyword filtering.
+  - Combine filters + sorting into a single state system.
+  - Add more advanced filters (e.g., 21st‑century books).
+  - Improve UI with animations and active‑button states.
 
 ## View it live
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://technigo-project-library-2ix.pages.dev/

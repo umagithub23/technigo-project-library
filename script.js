@@ -246,6 +246,9 @@ filterButtons.forEach((btn) => {
 
     if (genre === 'all') {
       renderBooks(books);
+    } else if (genre === '21st') {
+      const filtered = books.filter((book) => book.year >= 2000);
+      renderBooks(filtered);
     } else {
       const filtered = books.filter((book) => book.genre.toLowerCase() === genre);
       renderBooks(filtered);
@@ -274,6 +277,14 @@ sortButtons.forEach((btn) => {
 
     if (sortType === 'ratinglow') {
       sortedBooks.sort((a, b) => a.rating - b.rating);
+    }
+
+    if (sortType === 'titleaz') {
+      sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
+    }
+
+    if (sortType === 'titleza') {
+      sortedBooks.sort((a, b) => b.title.localeCompare(a.title));
     }
 
     renderBooks(sortedBooks);

@@ -44,6 +44,26 @@ h1 {
   flex: 1;
 }
 
+#genre-fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#genre-fieldset button {
+  flex: 1 1 calc(33.33% - 10px);
+}
+
+#sorting-fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#sorting-fieldset button {
+  flex: 1 1 calc(33.33% - 10px);
+}
+
 #book-filters legend {
   font-size: 1.05rem;
   font-weight: 700;
